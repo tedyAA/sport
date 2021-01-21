@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import FrontPage from "./components/frontPage/FrontPage";
+import CarPage from "./components/carPage/CarPage"
+import AboutUs from "./components/aboutUs/AboutUs"
+import Booking from './components/bookingPage/booking'
+import Contacts from './components/contacts/Contacts'
+import RentalConditions from './components/rentalConditions/RentalConditions'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <main>
+     <BrowserRouter>
+            <Switch>
+                <Route path="/FrontPage" component={FrontPage} exact />
+                <Route path="/CarPage" component={CarPage} />
+                <Route path="/About" component={AboutUs} />
+                <Route path="/Booking" component={Booking} />
+                <Route path="/Contacts" component={Contacts} />
+                <Route path="/RentalConditionsntacts" component={RentalConditions}/>
+            </Switch>
+      </BrowserRouter>
+        </main>
     </div>
   );
 }

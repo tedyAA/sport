@@ -1,0 +1,35 @@
+[
+    {
+    "name":"peugeot 3008",
+    "price": "13.99",
+    "specifications":{
+"1":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+"2":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+"3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+"4":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+"5":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
+    }
+    },
+    {
+        "name":"peugeot 3008",
+        "price": "13.99",
+        "specifications":{
+    "1":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+    "2":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+    "3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+    "4":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+    "5":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
+        }
+        },
+        {
+            "name":"peugeot 3008",
+            "price": "13.99",
+            "specifications":{
+        "1":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+        "2":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+        "3":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+        "4":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+        "5":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
+            }
+            }
+]
