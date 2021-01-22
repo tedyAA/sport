@@ -1,34 +1,82 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
+import React from "react";
+import "react-dates/initialize";
+import { DateRangePicker } from "react-dates";
+import "react-dates/lib/css/_datepicker.css";
 
-const useStyles = makeStyles((theme) => ({
-  container: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-  textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
-    width: 230,
-  },
-}));
+class Calendar extends React.Component {
+    numberOfNightsBetweenDates = (startDate, endDate) => {
+        const start = new Date(startDate) //clone
+        const end = new Date(endDate) //clone
+        let dayCount = 1
+        let price=0
+        let finalPrice=0
+      
+        while (end > start) {
+          dayCount++
+          start.setDate(start.getDate() + 1)
+        }
+      if(dayCount<=3){
+price=20
+finalPrice=price*dayCount
+      }
+      if(dayCount>3 && dayCount<7){
+        price=15
+        finalPrice=price*dayCount
+              }
+              if(dayCount>7){
+                price=10
+                finalPrice=price*dayCount
+                      }
+                      return "selected days " + dayCount+" final price " + finalPrice
+        
+      }
+  state = {
+    startDate: null,
+    endDate: null,
+    endDateFormatted: null,
+    startDateFormatted: null,
+    finalDate:null,
+   
+  };
+  hundleDateChange(startDate, endDate,finalDate, endDateFormatted,startDateFormatted) {
+    this.setState(() => ({
+      endDate,
+      startDate,
+      finalDate:endDateFormatted-startDateFormatted
+    }));
+    if (startDate != null) {
+      this.setState(() => ({
+        startDateFormatted: startDate.format("D"),
+      }));
+    }
+    if (endDate != null) {
+      this.setState(() => ({
+        endDateFormatted: endDate.format("D"),
+        
+      }));
+    }
+  }
+  render() {
+    return (
+      <div className="App">
+        <DateRangePicker
+          startDate={this.state.startDate}
+          startDateId="start_date_id"
+          endDate={this.state.endDate}
+          endDateId="end_date_id"
+          onDatesChange={({ startDate, endDate,finalDate }) =>
+            this.hundleDateChange(startDate, endDate, finalDate)
+          }
+          focusedInput={this.state.focusedInput}
+          onFocusChange={(focusedInput) => this.setState({ focusedInput })}
+          finalDate={this.state.finalDate}
+        />
+       <div>{this.numberOfNightsBetweenDates(this.state.startDate, this.state.endDate)}</div>
+        <div>
 
-export default function DateAndTimePickers() {
-  const classes = useStyles();
-
-  return (
-    <form className={classes.container} noValidate>
-      <TextField
-        id="datetime-local"
-        label="Избери дата"
-        type="datetime-local"
-        defaultValue="2017-05-24T10:30"
-        className={classes.textField}
-        InputLabelProps={{
-          shrink: true,
-        }}
-      />
-    </form>
-  );
+        </div>
+      </div>
+    );
+  }
 }
+export default Calendar;

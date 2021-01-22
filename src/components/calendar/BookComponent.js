@@ -17,7 +17,6 @@ const BookComponent =()=> {
     <div class="bookComponent">
   <Row>
     <Col><Calendar/></Col>
-    <Col><Calendar/></Col>
     <Col> <Button onClick={redirect} variant="danger">Резервирай</Button></Col>
   </Row>
     </div>

@@ -1,39 +1,82 @@
 .image-gallery {
-    width:100%;
+    width:85%;
     margin-left: 50px;
     margin-top: 50px;
 }
-.cardRow{
-    display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  }
-  .info-container ul li{
-  background-color: #fbfbfb; 
-  border-top: 2px dashed #d3d3d3;
+.car .car1{
+    list-style: none;
+    padding: .5rem 0;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 30px;
+    background-color: #fbfbfb;
+    border-top: 2px dashed #d3d3d3;
 }
   
-  .cell{
-    flex: 0 0 auto;
-    min-height: 0;
-    min-width: 0;
-    width: 100%;
-    
-  }
-ul {
+  .car{
     list-style: none;
-    margin-top: 20px;
-    margin-left: 20px;
+    list-style-type: none;
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
   }
-  
-ul li:before {
-    content: "☑";
+ .car1:before {
+  content: '✔️';
+  font-family: FontAwesome;
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  color: #f21214;
+  line-height: 18px;
+  /* margin-left: 20px; */
+ 
   }
-  li{
-    border-top: 2px dashed rgba(45, 45, 48, 0.596);
+.price{
+  font-weight: bold;
+  font-size: 40px;
+  font-family: Rubik,sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #333457;
+}
+  .flex-container > div {
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 80px;
   }
+  .col-sm-4 {  
+    background-color: #fbfbfb6b;
+}
+.col-sm-8 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+}
+.icons{
+  opacity: .4;
+}
+.cell1{
+  border-right: 1px solid  #eee;
+    border-bottom: 1px solid  #eee;
+    
+}
+.cell2{
+  border-bottom: 1px solid #eee;
+}
+.cell3{
+  border-right: 1px solid  #eee;
+}
+.bigContainer{
+  width: 100%;
+  display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
   @media screen and (min-width: 1100px) {
     div.front {
       text-align: center;
@@ -44,12 +87,12 @@ ul li:before {
 
   }  @media screen and (min-width: 1100px) {
     div.carContainer1 {
-      width:90%;
+      width:80%;
       background-color:white;
       margin-right:auto;
       margin-bottom:50px;
       margin-left:auto;
-      margin-top: 0px;
+      margin-top: 100px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
     }
 } 

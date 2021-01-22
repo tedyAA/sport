@@ -15,10 +15,10 @@ class Header extends Component {
     <div class="right "><AiOutlinePhone class="mr-2"/>Телефон: +(359) 898 989 898</div>
     </div>
     <div class="section">
-    <div class="right"><GoLocation class="mr-2"/>гр София ул. АлаБала Портокала 10</div>
+    <div class="right"><GoLocation class="mr-2"/>гр. София, ул.Академик Стефан Младенов 46</div>
 </div>
 <div class="section">
-<div class="right"><BsEnvelope class="mr-2"/>Email: sportcarrent@gmail.com</div>
+<div class="right"><BsEnvelope class="mr-2"/>Email: sportcarrentbg@gmail.com</div>
   </div>
   <div class="section">
 <div class="right"><FiFacebook /></div>
