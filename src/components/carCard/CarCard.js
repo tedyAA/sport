@@ -1,22 +1,24 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Card, Button } from 'react-bootstrap';
-import image from "../../images/peugeot.jpg";
 import "./CarCard.css";
 import { BsFillPersonFill,} from "react-icons/bs";
 import { FaSnowflake } from 'react-icons/fa';
 import {  GiCarDoor } from "react-icons/gi";
 import { GrManual } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
-const CarCard =()=> {
+const CarCard =({ carImage, carName, carPrice, index })=> {
+  
     return(
     <Card class="card" style={{ width: '23rem' }}>
-    <Card.Img variant="top" src={image} />
+       <Link to={`CarPage/${index}`} key={index}>
+       <Card.Img variant="top" src={ carImage} />
+              </Link>
     <Card.Body>
-      <Card.Title>Peugeot</Card.Title>
-      <Card.Title>от 10,99€ / ден</Card.Title>
-      
-      <Button variant="primary" href="/CarPage">Повече информация</Button>
+      <Card.Title>{carName}</Card.Title>
+      <Card.Title>от {carPrice}€ / ден</Card.Title>
+      <Button variant="primary">Повече информация</Button>
     </Card.Body>
     <Card.Footer className="text-muted">
         <div class="footerRow">

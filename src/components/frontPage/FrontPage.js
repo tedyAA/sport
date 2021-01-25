@@ -2,24 +2,21 @@ import './FrontPage.css';
 import NavigationBar from "../navs/NavigationBar";
 import CarCard from "../carCard/CarCard";
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import cars from './cars.json'
 
 function FrontPage() {
   return (
     <div class="app">
       <NavigationBar/>
       <div class="carContainer">
+      <Row>
+      {cars.map((car, index) => {
         
-      <Row>
-      <Col sm><CarCard/></Col>
-      <Col sm><CarCard/></Col>
-      <Col sm><CarCard/></Col>
-      </Row>
-      <Row>
-      <Col sm><CarCard/></Col>
-      <Col sm><CarCard/></Col>
-      <Col sm><CarCard/></Col>
-  </Row>
+              return (
+               <CarCard class="ml-5" carImage={car.image} carName={car.name} carPrice={car.price} index={index}/>
+              );
+            })}
+            </Row>
       </div>
      </div>
     

@@ -1,6 +1,7 @@
 import NavigationBar from "../navs/NavigationBar";
 
 function RentalConditions() {
+  
   return (
     <div >
       <NavigationBar/>

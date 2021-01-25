@@ -2,6 +2,8 @@ import React from "react";
 import "react-dates/initialize";
 import { DateRangePicker } from "react-dates";
 import "react-dates/lib/css/_datepicker.css";
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 class Calendar extends React.Component {
     numberOfNightsBetweenDates = (startDate, endDate) => {
@@ -15,6 +17,9 @@ class Calendar extends React.Component {
           dayCount++
           start.setDate(start.getDate() + 1)
         }
+        if(startDate==null || endDate == null){
+            return ""
+        }
       if(dayCount<=3){
 price=20
 finalPrice=price*dayCount
@@ -27,7 +32,7 @@ finalPrice=price*dayCount
                 price=10
                 finalPrice=price*dayCount
                       }
-                      return "selected days " + dayCount+" final price " + finalPrice
+                      return finalPrice
         
       }
   state = {
@@ -38,7 +43,7 @@ finalPrice=price*dayCount
     finalDate:null,
    
   };
-  hundleDateChange(startDate, endDate,finalDate, endDateFormatted,startDateFormatted) {
+  hundleDateChange(startDate, endDate, endDateFormatted,startDateFormatted) {
     this.setState(() => ({
       endDate,
       startDate,
@@ -57,8 +62,10 @@ finalPrice=price*dayCount
     }
   }
   render() {
-    return (
-      <div className="App">
+    return ( 
+      <div>
+          <Row>
+              <Col xs={6}>
         <DateRangePicker
           startDate={this.state.startDate}
           startDateId="start_date_id"
@@ -69,9 +76,12 @@ finalPrice=price*dayCount
           }
           focusedInput={this.state.focusedInput}
           onFocusChange={(focusedInput) => this.setState({ focusedInput })}
-          finalDate={this.state.finalDate}
         />
+        </Col>
+        <Col>
        <div>{this.numberOfNightsBetweenDates(this.state.startDate, this.state.endDate)}</div>
+       </Col>
+       </Row>
         <div>
 
         </div>

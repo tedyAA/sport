@@ -13,11 +13,11 @@ function App() {
      <BrowserRouter>
             <Switch>
                 <Route path="/FrontPage" component={FrontPage} exact />
-                <Route path="/CarPage" component={CarPage} />
-                <Route path="/About" component={AboutUs} />
-                <Route path="/Booking" component={Booking} />
-                <Route path="/Contacts" component={Contacts} />
-                <Route path="/RentalConditionsntacts" component={RentalConditions}/>
+                <Route path="/CarPage/:carName" component={CarPage} exact />
+                <Route path="/About" component={AboutUs} exact/>
+                <Route path="/Booking/:carName" component={Booking} exact/>
+                <Route path="/Contacts" component={Contacts} exact/>
+                <Route path="/RentalConditions" component={RentalConditions} exact/>
             </Switch>
       </BrowserRouter>
         </main>

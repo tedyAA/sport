@@ -7,37 +7,19 @@ import {FaSnowflake} from 'react-icons/fa';
 import {GiCarDoor} from "react-icons/gi";
 import { GrManual } from "react-icons/gr";
 import ImageGallery from 'react-image-gallery';
-import BookComponent from '../calendar/BookComponent'
+import Calendar from '../calendar/Calendar'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import cars from '../frontPage/cars.json'
+import Button from 'react-bootstrap/Button'
+import { Link } from "react-router-dom";
 
+const CarPage = (props) => {
 
-const images = [
-    {
-        original: 'https://www.groupe-psa.com/content/uploads/2016/07/COVER-2020-PAGE-PEUGEOT.jpg',
-        thumbnail: 'https://www.groupe-psa.com/content/uploads/2016/07/COVER-2020-PAGE-PEUGEOT.jpg',
-    },
-    {
-        original: 'https://media.peugeot.bg/image/33/3/peugeot-5008-2009styp-019b.715333.19.jpg?autocrop=1',
-        thumbnail: 'https://media.peugeot.bg/image/33/3/peugeot-5008-2009styp-019b.715333.19.jpg?autocrop=1',
-    },
-    {
-        original: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz3N0IDAIC6b9-XcOHN9PKru7IbbixERhCSA&usqp=CAU',
-        thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz3N0IDAIC6b9-XcOHN9PKru7IbbixERhCSA&usqp=CAU',
-    },
-    {
-        original: 'https://autobild.bg/wp-content/uploads/2020/01/Bilder-Peugeot-2008-II-2019-1200x800-390b583617ef3f5d.jpg',
-        thumbnail: 'https://autobild.bg/wp-content/uploads/2020/01/Bilder-Peugeot-2008-II-2019-1200x800-390b583617ef3f5d.jpg',
-    },
-    {
-        original: 'https://www.driver.bg/wp-content/uploads/2020/09/peugeot-5008-2020-01.jpg',
-        thumbnail: 'https://www.driver.bg/wp-content/uploads/2020/09/peugeot-5008-2020-01.jpg',
-    },
-];
-
-function CarPage() {
-  
+  const index = props.match.params.carName;
+  let images=cars[index].images;
+  let car = cars[index];
     return (
         <div class="front">
             <NavigationBar/>
@@ -57,21 +39,23 @@ function CarPage() {
                                 </div>
                             </div>
                             <ul class="car">
-                            <li class="car1">Lorem ipsum dolor , etur </li>
-                            <li class="car1">Lorem ipsum dolor , etur </li>
-                            <li class="car1">Lorem ipsum Lorem ipsum dolor , etur </li>
-                            <li class="car1">Lorem ipsum Lorem ipsum dolor , etur </li>
-                            <li class="car1">Lorem ipsum dolor , etur </li>
-                            <li class="car1">Lorem ipsum Lorem ipsum dolor , etur </li>
-                            <li class="car1">Lorem ipsum Lorem ipsum dolor , etur </li>
-                              
+                            {car.specifications.map((specifications) => {
+                         return (
+                               <li class="car1">{specifications}</li> 
+                                   );
+                             })}     
                             </ul>
-                            <div style={{display: "inline-block"}}><span>от</span><span class="price"> 13,99</span><span> /ден</span></div>
+                            <div style={{display: "inline-block"}}><span>от</span><span class="price"> €{car.price}</span><span>/ден</span></div>
                             </Col>
                     </Row>
                 </Container>
             </div>
-            <BookComponent/>
+            <div class="calendar"><Calendar/></div>      
+            <Link to={`/Booking/${car.name}`} key={index}>
+            <Button variant="danger">Резервирай</Button>
+              </Link>
+      
+            
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                 et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                 aliquip ex ea commodo consequat. Dussis aute irure dolor in reprehenderit in voluptate velit esse cillum

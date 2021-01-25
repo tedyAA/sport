@@ -18,7 +18,7 @@ const NavigationBar =()=> {
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
         <Nav.Link href="/FrontPage">Автомобили</Nav.Link>
-        <Nav.Link to="" href="/RentalConditionsntacts">Условия за наем</Nav.Link>
+        <Nav.Link href="/RentalConditions">Условия за наем</Nav.Link>
         <Nav.Link href="/About">За нас</Nav.Link>
         <Nav.Link href="/Contacts">Контакти</Nav.Link>
     </Nav>
