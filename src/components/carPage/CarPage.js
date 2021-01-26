@@ -12,8 +12,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import cars from '../frontPage/cars.json'
-import Button from 'react-bootstrap/Button'
-import { Link } from "react-router-dom";
+
 
 const CarPage = (props) => {
 
@@ -39,6 +38,7 @@ const CarPage = (props) => {
                                 </div>
                             </div>
                             <ul class="car">
+                              <h1 >{car.name}</h1>
                             {car.specifications.map((specifications) => {
                          return (
                                <li class="car1">{specifications}</li> 
@@ -50,11 +50,7 @@ const CarPage = (props) => {
                     </Row>
                 </Container>
             </div>
-            <div class="calendar"><Calendar/></div>      
-            <Link to={`/Booking/${car.name}`} key={index}>
-            <Button variant="danger">Резервирай</Button>
-              </Link>
-      
+            <div class="calendar"><Calendar price={car.price} name={ car.name}/></div>      
             
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                 et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

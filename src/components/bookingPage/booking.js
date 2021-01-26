@@ -7,9 +7,13 @@ import { Button } from 'react-bootstrap';
 import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl'
 import emailjs from 'emailjs-com';
+import { Link } from "react-router-dom";
 
-export default function ContactUs() {
-
+const ContactUs = (props) => {
+    let name = props.location.props.carName
+    let start = props.location.props.startDate
+    let end = props.location.props.endDate
+    let price = props.location.props.price
     function sendEmail(e) {
       e.preventDefault();
   
@@ -26,6 +30,10 @@ export default function ContactUs() {
           <div  class="form">
               <h1 class="mt-3 mb-4">ВАШИТЕ ДАННИ</h1>
     <Form className="contact-form" onSubmit={sendEmail}>
+    <input type="hidden" name="car_name" value={name}/>
+    <input type="hidden" name="from_date" value={start}/>
+    <input type="hidden" name="to_date" value={end}/>
+    <input type="hidden" name="price" value={price}/>
     <Form.Row>
       <Form.Group as={Col} controlId="formGridEmail">
         <Form.Label>Име</Form.Label>
@@ -65,4 +73,4 @@ export default function ContactUs() {
   </div>
   );
 }
-
+export default ContactUs

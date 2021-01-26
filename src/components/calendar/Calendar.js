@@ -4,15 +4,16 @@ import { DateRangePicker } from "react-dates";
 import "react-dates/lib/css/_datepicker.css";
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import { Link } from "react-router-dom";
 
 class Calendar extends React.Component {
+    
     numberOfNightsBetweenDates = (startDate, endDate) => {
         const start = new Date(startDate) //clone
         const end = new Date(endDate) //clone
         let dayCount = 1
-        let price=0
         let finalPrice=0
-      
+      let price = (this.props.price)
         while (end > start) {
           dayCount++
           start.setDate(start.getDate() + 1)
@@ -21,17 +22,18 @@ class Calendar extends React.Component {
             return ""
         }
       if(dayCount<=3){
-price=20
+
 finalPrice=price*dayCount
       }
       if(dayCount>3 && dayCount<7){
-        price=15
+        price-=(price*0.05)
         finalPrice=price*dayCount
               }
               if(dayCount>7){
-                price=10
+                price-=(price*0.1)
                 finalPrice=price*dayCount
                       }
+                     
                       return finalPrice
         
       }
@@ -47,20 +49,21 @@ finalPrice=price*dayCount
     this.setState(() => ({
       endDate,
       startDate,
-      finalDate:endDateFormatted-startDateFormatted
+      finalDate:endDateFormatted-startDateFormatted,
     }));
     if (startDate != null) {
       this.setState(() => ({
-        startDateFormatted: startDate.format("D"),
+        startDateFormatted: startDate.format("DD-MM-YY"),
       }));
     }
     if (endDate != null) {
       this.setState(() => ({
-        endDateFormatted: endDate.format("D"),
+        endDateFormatted: endDate.format("DD-MM-YY"),
         
       }));
     }
   }
+  
   render() {
     return ( 
       <div>
@@ -68,9 +71,7 @@ finalPrice=price*dayCount
               <Col xs={6}>
         <DateRangePicker
           startDate={this.state.startDate}
-          startDateId="start_date_id"
           endDate={this.state.endDate}
-          endDateId="end_date_id"
           onDatesChange={({ startDate, endDate,finalDate }) =>
             this.hundleDateChange(startDate, endDate, finalDate)
           }
@@ -81,6 +82,20 @@ finalPrice=price*dayCount
         <Col>
        <div>{this.numberOfNightsBetweenDates(this.state.startDate, this.state.endDate)}</div>
        </Col>
+       <Col>
+       <Link to={
+           {
+               pathname:"/Booking",
+               props:{
+                   startDate:this.state.startDateFormatted,
+                 endDate:this.state.endDateFormatted, 
+                 carName: this.props.name,
+                price: this.numberOfNightsBetweenDates(this.state.startDate, this.state.endDate) }
+           }
+       }>
+       <button class="btn btn-danger">Rezervirai</button>
+       </Link>
+       </Col>
        </Row>
         <div>
 
@@ -89,4 +104,5 @@ finalPrice=price*dayCount
     );
   }
 }
+
 export default Calendar;
