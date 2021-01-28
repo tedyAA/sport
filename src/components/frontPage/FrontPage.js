@@ -13,7 +13,7 @@ function FrontPage() {
       {cars.map((car, index) => {
         
               return (
-               <CarCard class="ml-5" carImage={car.image} carName={car.name} carPrice={car.price} index={index}/>
+               <CarCard class="ml-5" carImage={car.image} carName={car.name} carPrice={car.price} index={index} gear={car.gear}/>
               );
             })}
             </Row>

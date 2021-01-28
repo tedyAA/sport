@@ -3,11 +3,14 @@ margin-left: 52px;
 margin-top: 20px;
 margin-bottom:20px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+font-family: Rubik,sans-serif;
+color:#333457;
+font-weight: 800;
 }
  
 .card:hover {
   background-color: #fbfbfb; 
-  border: 2px dashed #db1e1e;
+  border: 2px dashed #007bff;
 }
 .footerRow{
     display: flex;

@@ -1,7 +1,18 @@
 .map{
-    width: 400px;
+    width: 90%;
     height: 400px;
 }
 .contactsContainer{
     margin-top: 200px;
 }
+.h1{
+  
+    color: #333457;
+    font-weight: 700;
+    margin-top:20px;
+    }
+    .ul1{
+     
+        color: #333457;
+        font-weight: 500;
+    }

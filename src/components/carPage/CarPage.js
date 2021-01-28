@@ -19,13 +19,16 @@ const CarPage = (props) => {
   const index = props.match.params.carName;
   let images=cars[index].images;
   let car = cars[index];
+  let gear =cars[index].gear;
     return (
-        <div class="front">
+        <div class="app">
             <NavigationBar/>
             <div class="carContainer1">
                 <Container fluid class="carContainer1">
                     <Row>
-                        <Col sm={8}><ImageGallery class="ImageGallery" items={images}/></Col>
+                        <Col sm={8}>
+                          <lebel class="name">{car.name}</lebel>
+                          <ImageGallery class="ImageGallery" items={images}/></Col>
                         <Col sm={4}>
                             <div class="bigContainer">
                                 <div class="flex-container">
@@ -34,11 +37,11 @@ const CarPage = (props) => {
                                 </div>
                                 <div class="flex-container">
                                     <div class="cell2"><h3><FaSnowflake class="icons"/></h3></div>
-                                    <div class="cell4"><h3><GrManual class="icons"/></h3></div>
-                                </div>
+                                    <div class="cell4"><h3> <img src={gear=="true" ? "./gearbox-auto.jpeg" : "https://carent.bg/assets/src/img/carent/gears_manual.svg"}/></h3></div>
+                                    
+                                     </div>
                             </div>
                             <ul class="car">
-                              <h1 >{car.name}</h1>
                             {car.specifications.map((specifications) => {
                          return (
                                <li class="car1">{specifications}</li> 
@@ -48,16 +51,25 @@ const CarPage = (props) => {
                             <div style={{display: "inline-block"}}><span>от</span><span class="price"> €{car.price}</span><span>/ден</span></div>
                             </Col>
                     </Row>
+                    <Row>
+                      <Calendar class="mb-3"price={car.price} name={ car.name} car={car}/>
+                      </Row>
                 </Container>
             </div>
-            <div class="calendar"><Calendar price={car.price} name={ car.name}/></div>      
-            
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+               
+            <div class="textContainer">
+            <strong class="mt-5 mb-5">Резервация за кола под наем по телефона/Viber/Whatsapp</strong><p> +359 888 22 16 00</p>
+            <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              </strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                 et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                 aliquip ex ea commodo consequat. Dussis aute irure dolor in reprehenderit in voluptate velit esse cillum
                 dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
                 officia
                 deserunt mollit anim id est laborum."</p>
+            </div>
+            
 
 
         </div>

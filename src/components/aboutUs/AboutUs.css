@@ -1,5 +1,14 @@
-
-.container{
-    width:70%;
-    text-align: center;
-}
+.h1{
+    margin-left: 50px;
+    color: #333457;
+    font-weight: 700;
+    }
+    .h2{
+    color: red;
+    margin-left: 70px;
+    }
+    .ul{
+        margin-left: 90px;
+        color: #333457;
+        font-weight: 500;
+    }

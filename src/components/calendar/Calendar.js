@@ -5,7 +5,9 @@ import "react-dates/lib/css/_datepicker.css";
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { Link } from "react-router-dom";
-
+import "./calendar.css";
+import Container from 'react-bootstrap/Container'
+import { FaSolarPanel } from "react-icons/fa";
 class Calendar extends React.Component {
     
     numberOfNightsBetweenDates = (startDate, endDate) => {
@@ -34,8 +36,7 @@ finalPrice=price*dayCount
                 finalPrice=price*dayCount
                       }
                      
-                      return finalPrice
-        
+                      return "€"+Math.round(finalPrice * 100) / 100 + "/за " + dayCount +" дни"        
       }
   state = {
     startDate: null,
@@ -66,10 +67,11 @@ finalPrice=price*dayCount
   
   render() {
     return ( 
-      <div>
+      <Container>
           <Row>
-              <Col xs={6}>
-        <DateRangePicker
+              <Col xs={4}>
+                  <div  class="mt-3" >
+                  <DateRangePicker
           startDate={this.state.startDate}
           endDate={this.state.endDate}
           onDatesChange={({ startDate, endDate,finalDate }) =>
@@ -78,11 +80,12 @@ finalPrice=price*dayCount
           focusedInput={this.state.focusedInput}
           onFocusChange={(focusedInput) => this.setState({ focusedInput })}
         />
+                  </div>
+       
+         
         </Col>
-        <Col>
-       <div>{this.numberOfNightsBetweenDates(this.state.startDate, this.state.endDate)}</div>
-       </Col>
-       <Col>
+        <Col xs={6}><div class="mt-3"><span class="price">{this.numberOfNightsBetweenDates(this.state.startDate, this.state.endDate)}</span></div></Col>
+       
        <Link to={
            {
                pathname:"/Booking",
@@ -90,17 +93,18 @@ finalPrice=price*dayCount
                    startDate:this.state.startDateFormatted,
                  endDate:this.state.endDateFormatted, 
                  carName: this.props.name,
-                price: this.numberOfNightsBetweenDates(this.state.startDate, this.state.endDate) }
+                price: this.numberOfNightsBetweenDates(this.state.startDate, this.state.endDate),
+                car: this.props.car}
            }
        }>
-       <button class="btn btn-danger">Rezervirai</button>
+       <button  class="btn btn-danger mt-4">Резервирай</button>
        </Link>
-       </Col>
+      
        </Row>
         <div>
-
         </div>
-      </div>
+        </Container>
+    
     );
   }
 }

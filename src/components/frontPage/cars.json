@@ -7,12 +7,12 @@
                 "thumbnail": "https://media.peugeot.bg/image/13/8/peugeot-3008-2009styp-010b-fr.712138.6.jpg?autocrop=1"
             },
             {
-                "original": "https://www.groupe-psa.com/content/uploads/2016/07/COVER-2020-PAGE-PEUGEOT.jpg",
-                "thumbnail": "https://www.groupe-psa.com/content/uploads/2016/07/COVER-2020-PAGE-PEUGEOT.jpg"
+                "original": "https://media.peugeot.bg/image/13/9/peugeot-3008-2009styp-011b-fr.712139.17.jpg",
+                "thumbnail": "https://media.peugeot.bg/image/13/9/peugeot-3008-2009styp-011b-fr.712139.17.jpg"
             },
             {
-                "original": "https://www.groupe-psa.com/content/uploads/2016/07/COVER-2020-PAGE-PEUGEOT.jpg",
-                "thumbnail": "https://www.groupe-psa.com/content/uploads/2016/07/COVER-2020-PAGE-PEUGEOT.jpg"
+                "original": "https://i.pinimg.com/originals/9a/5d/41/9a5d41cf0ce85f8abf339b8d60d86d65.jpg",
+                "thumbnail": "https://i.pinimg.com/originals/9a/5d/41/9a5d41cf0ce85f8abf339b8d60d86d65.jpg"
             },
             {
                 "original": "https://www.groupe-psa.com/content/uploads/2016/07/COVER-2020-PAGE-PEUGEOT.jpg",
@@ -29,7 +29,8 @@
             "Заместващ автомобил при авария"   
             ],
         "name":"Peugeot 3008",
-        "price":"10.99"
+        "price":"10.99",
+        "gear":"true"
     },
     {
         "image": "https://media.peugeot.co.uk/image/95/7/rcz-past-model.141957.19.jpg?autocrop=1",
@@ -61,7 +62,8 @@
             "Заместващ автомобил при авария"   
             ],
         "name":"Peugeot 308 rcz",
-        "price":"10.99"
+        "price":"10.99",
+        "gear":"false"
     },
     {
         "image": "https://cdn3.focus.bg/autodata/i/peugeot/205/205-ii-20ac/large/34b78d3db0a4f84a8f25b4e3efea6c89.jpg",
@@ -93,7 +95,8 @@
         "Заместващ автомобил при авария"   
         ],
         "name":"Peugeot 205",
-        "price":"10.99"
+        "price":"10.99",
+        "gear":"true"
     },
     {
         "image": "https://automedia.investor.bg/media/files/old/upload/news/body/15102005/Peugeot_306.jpg",
@@ -157,7 +160,8 @@
             "Заместващ автомобил при авария"   
             ],
         "name":"Peugeot 208",
-        "price":"10.99"
+        "price":"10.99",
+        "gear":"false"
     },
     {
         "image": "https://cdn3.focus.bg/autodata/i/peugeot/207/207/large/e09d8eb5f74bf3207f52e2dead1c472e.jpg",

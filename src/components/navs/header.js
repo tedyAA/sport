@@ -6,6 +6,9 @@ import { FiFacebook } from "react-icons/fi";
 import { FiYoutube } from "react-icons/fi";
 import { FaInstagram } from "react-icons/fa";
 import { FaViber } from "react-icons/fa";
+import Dropdown from 'react-bootstrap/Dropdown'
+import DropdownButton from 'react-bootstrap/DropdownButton'
+import Flags from 'country-flag-icons/react/1x1'
 
 class Header extends Component {
   render() {
@@ -26,12 +29,13 @@ class Header extends Component {
   <div class="section">
 <div class="right"><FaInstagram/></div>
   </div>
-  <div class="section">
-<div class="right"><FiYoutube /></div>
-  </div>
   <div class="section1">
 <div class="right"><FaViber /></div>
   </div>
+  <DropdownButton id="dropdown-item-button" title={<Flags.BG title="Bulgarian" className="flagIcons"/>} variant="dark">
+  <Dropdown.Item as="button">BG <Flags.BG title="Bulgarian" className="flagIcons"/></Dropdown.Item>
+  <Dropdown.Item as="button">EN <Flags.US title="United States" className="flagIcons"/></Dropdown.Item>
+</DropdownButton>
   </div>
     );
   }

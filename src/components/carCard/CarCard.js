@@ -9,7 +9,7 @@ import { GrManual } from "react-icons/gr";
 import { Link } from "react-router-dom";
 
 
-const CarCard =({ carImage, carName, carPrice, index })=> {
+const CarCard =({ carImage, carName, carPrice, index , gear})=> {
   
     return(
     <Card class="card" style={{ width: '23rem' }}>
@@ -26,7 +26,7 @@ const CarCard =({ carImage, carName, carPrice, index })=> {
     <h5 class="mr-4 ml-3"><BsFillPersonFill />5 </h5>
     <h5 class="mr-4"><GiCarDoor />5 </h5>
     <h5 class="mr-4"><FaSnowflake />A/C </h5>
-    <h5 class="mr-4"><GrManual /> </h5>
+    <h5 class="mr-4"> <img src={gear=="true" ? "./gearbox-auto.jpeg" : "https://carent.bg/assets/src/img/carent/gears_manual.svg"}/></h5>
     </div>
     </Card.Footer>
   </Card>

@@ -1,0 +1,21 @@
+.dashed{
+   /* color:white;
+  width: 70%;
+  width: 50%;
+  height: auto;
+  margin-right: auto;
+    margin-left: auto; */
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.20); */
+   
+}
+/* .dashed:hover {
+    background-color: #fbfbfb; 
+    border: 2px dashed #007bff;
+  } */
+  .priceBox{
+    color : #333457;
+    /* padding: 2rem .9375rem 2rem 40px; */
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }

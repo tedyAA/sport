@@ -8,12 +8,16 @@ import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl'
 import emailjs from 'emailjs-com';
 import { Link } from "react-router-dom";
+import Container from 'react-bootstrap/Container'
+import Card from '../carCard/CarCard'
+
 
 const ContactUs = (props) => {
     let name = props.location.props.carName
     let start = props.location.props.startDate
     let end = props.location.props.endDate
     let price = props.location.props.price
+    let car =  props.location.props.car
     function sendEmail(e) {
       e.preventDefault();
   
@@ -25,10 +29,13 @@ const ContactUs = (props) => {
         });
     }
   return (
-      <div class="booking">
+      <div>
           <NavigationBar/>
-          <div  class="form">
-              <h1 class="mt-3 mb-4">ВАШИТЕ ДАННИ</h1>
+          
+          <div   class="form">
+          <Container>
+          <div>
+              <h1 class="">ВАШИТЕ ДАННИ</h1>
     <Form className="contact-form" onSubmit={sendEmail}>
     <input type="hidden" name="car_name" value={name}/>
     <input type="hidden" name="from_date" value={start}/>
@@ -65,10 +72,12 @@ const ContactUs = (props) => {
     <FormControl name="message" type="message" as="textarea" aria-label="With textarea" />
   </InputGroup>
     </Form.Row>
-    <Button class="btn btn-danger mt-4"variant="primary" type="submit" value="Send">
+    <Button class=" mt-3 mb-3 btn btn-danger"variant="primary" type="submit" value="Send">
       Submit
     </Button>
   </Form>
+  </div>
+  </Container>
   </div>
   </div>
   );

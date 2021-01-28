@@ -6,12 +6,23 @@ background-color: rgb(0 0 0 / 68%);
     font-size: 20px;
     
 }
-.navbar-light .navbar-brand {
+
+.navbar-light .navbar-brand{
     color: white;
 }
 .navbar-light .navbar-nav .nav-link{
     color: white;
-    
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #0fa3da;
+}
+.flagIcons{
+    width: 15px;
+    height: 10px;
+}
+.dropdown-menu{
+    min-width: 5px;
+  
 }
 @media screen and (max-width: 1100px) {
     div.try {
@@ -20,12 +31,13 @@ background-color: rgb(0 0 0 / 68%);
 }
 .header{
     height: 40px;
-    width: 100%;
+    /* width: 100%; */
     color:white;
     background-color:black;
     border: 1px solid  #d3d3d3;   
     margin:0;
-    padding: 0 65px;
+    padding: 0 60px;
+    font-size: 1px;
     
 }
 .right {
