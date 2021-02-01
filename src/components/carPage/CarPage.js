@@ -12,6 +12,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import cars from '../frontPage/cars.json'
+import { AiOutlinePhone } from "react-icons/ai";
 
 
 const CarPage = (props) => {
@@ -23,28 +24,27 @@ const CarPage = (props) => {
     return (
         <div class="app">
             <NavigationBar/>
-            <div class="carContainer1">
-                <Container fluid class="carContainer1">
+            <div class="carContainer">
+                <Container>
                     <Row>
                         <Col sm={8}>
                           <lebel class="name">{car.name}</lebel>
                           <ImageGallery class="ImageGallery" items={images}/></Col>
                         <Col sm={4}>
-                            <div class="bigContainer">
+                            <div class="iconsContainer">
                                 <div class="flex-container">
                                     <div class="cell1"><h3><GiCarDoor class="icons"/></h3></div>
                                     <div class="cell3"><h3><BsFillPersonFill class="icons"/></h3></div>
                                 </div>
                                 <div class="flex-container">
                                     <div class="cell2"><h3><FaSnowflake class="icons"/></h3></div>
-                                    <div class="cell4"><h3> <img src={gear=="true" ? "./gearbox-auto.jpeg" : "https://carent.bg/assets/src/img/carent/gears_manual.svg"}/></h3></div>
-                                    
-                                     </div>
+                                    <div class="cell4"><h3> <img src={gear=="true" ? "./automatic.png" : "./gear.png"}/></h3></div>
+                                    </div>
                             </div>
-                            <ul class="car">
+                            <ul class="table">
                             {car.specifications.map((specifications) => {
                          return (
-                               <li class="car1">{specifications}</li> 
+                               <li class="list">{specifications}</li> 
                                    );
                              })}     
                             </ul>
@@ -58,7 +58,7 @@ const CarPage = (props) => {
             </div>
                
             <div class="textContainer">
-            <strong class="mt-5 mb-5">Резервация за кола под наем по телефона/Viber/Whatsapp</strong><p> +359 888 22 16 00</p>
+            <strong class="mt-5 mb-5">Резервация за кола под наем по телефона/Viber/Whatsapp:</strong><p><AiOutlinePhone/> +359 888 22 16 00</p>
             <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                 et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
               </strong>

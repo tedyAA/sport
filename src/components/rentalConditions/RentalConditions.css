@@ -1,13 +1,13 @@
-.h1{
+.h1Style{
 margin-left: 50px;
 color: #333457;
 font-weight: 700;
 }
-.h2{
+.h2Style{
 color: red;
 margin-left: 70px;
 }
-.ul{
+.ulStyle{
     margin-left: 90px;
     color: #333457;
     font-weight: 500;

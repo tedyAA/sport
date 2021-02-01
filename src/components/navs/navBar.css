@@ -24,7 +24,7 @@ background-color: rgb(0 0 0 / 68%);
     min-width: 5px;
   
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1400px) {
     div.try {
       display: none;
     }
@@ -52,7 +52,7 @@ background-color: rgb(0 0 0 / 68%);
     border-left: 1px solid  #d3d3d3;
   
 }
-.section1{
+.section2{
     border-left: 1px solid  #d3d3d3;
     border-right: 1px solid  #d3d3d3;
   
