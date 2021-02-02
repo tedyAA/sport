@@ -8,8 +8,9 @@ import { Link } from "react-router-dom";
 import "./calendar.css";
 import Container from 'react-bootstrap/Container'
 import { FaSolarPanel } from "react-icons/fa";
+import i18n from 'i18next';
 class Calendar extends React.Component {
-    
+  
     numberOfNightsBetweenDates = (startDate, endDate) => {
         const start = new Date(startDate) //clone
         const end = new Date(endDate) //clone
@@ -85,7 +86,7 @@ finalPrice=price*dayCount
          
         </Col>
         <Col xs={6}><div class="mt-3"><span class="price">{this.numberOfNightsBetweenDates(this.state.startDate, this.state.endDate)}</span></div></Col>
-       
+       {i18n.language=="en"?
        <Link to={
            {
                pathname:"/Booking",
@@ -97,9 +98,22 @@ finalPrice=price*dayCount
                 car: this.props.car}
            }
        }>
-       <button  class="btn btn-danger mt-4">Резервирай</button>
-       </Link>
-      
+       <button  class="btn btn-danger mt-4">Book now</button>
+       </Link>:
+       <Link to={
+        {
+            pathname:"/Booking",
+            props:{
+                startDate:this.state.startDateFormatted,
+              endDate:this.state.endDateFormatted, 
+              carName: this.props.name,
+             price: this.numberOfNightsBetweenDates(this.state.startDate, this.state.endDate),
+             car: this.props.car}
+        }
+    }>
+    <button  class="btn btn-danger mt-4">Резервирай</button>
+    </Link>
+      }
        </Row>
         <div>
         </div>

@@ -13,9 +13,12 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import cars from '../frontPage/cars.json'
 import { AiOutlinePhone } from "react-icons/ai";
+import { useTranslation } from 'react-i18next';
+import i18n from 'i18next';
 
 
 const CarPage = (props) => {
+    const { t } = useTranslation();
 
   const index = props.match.params.carName;
   let images=cars[index].images;
@@ -42,13 +45,21 @@ const CarPage = (props) => {
                                     </div>
                             </div>
                             <ul class="table">
-                            {car.specifications.map((specifications) => {
-                         return (
-                               <li class="list">{specifications}</li> 
-                                   );
-                             })}     
+                                {i18n.language=="en"?
+                                 car.specificationsEN.map((specificationsEN) => {
+                                    return (
+                                          <li class="list">{specificationsEN}</li> 
+                                              );
+                                        })
+                                : car.specifications.map((specifications) => {
+                                    return (
+                                          <li class="list">{specifications}</li> 
+                                              );
+                                        })
+                                }
+                                
                             </ul>
-                            <div style={{display: "inline-block"}}><span>от</span><span class="price"> €{car.price}</span><span>/ден</span></div>
+                            <div style={{display: "inline-block"}}><span>{t('from')}</span><span class="price"> €{car.price}</span><span>{t('price')}</span></div>
                             </Col>
                     </Row>
                     <Row>
@@ -58,16 +69,9 @@ const CarPage = (props) => {
             </div>
                
             <div class="textContainer">
-            <strong class="mt-5 mb-5">Резервация за кола под наем по телефона/Viber/Whatsapp:</strong><p><AiOutlinePhone/> +359 888 22 16 00</p>
-            <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              </strong>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Dussis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                officia
-                deserunt mollit anim id est laborum."</p>
+            <strong class="mt-5 mb-5">{t('reservation')}</strong><p><AiOutlinePhone/> +359 888 22 16 00</p>
+            <strong>{t('carInfo')}</strong>
+            <p>{t('carspecifications')}</p>
             </div>
             
 

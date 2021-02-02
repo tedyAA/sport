@@ -7,18 +7,19 @@ import { FaSnowflake } from 'react-icons/fa';
 import {  GiCarDoor } from "react-icons/gi";
 import { GrManual } from "react-icons/gr";
 import { Link } from "react-router-dom";
-
+import { useTranslation } from 'react-i18next';
 
 const CarCard =({ carImage, carName, carPrice, index , gear})=> {
-  
+  const { t } = useTranslation();
+
     return(
     <Card class="card ml-3 mt-3" style={{ width: '90%' }}>
        <Card.Img variant="top" src={ carImage} />
     <Card.Body>
       <Card.Title>{carName}</Card.Title>
-      <Card.Title>от {carPrice}€ / ден</Card.Title>
+      <Card.Title>{t('from')} {carPrice}€ {t('price')}</Card.Title>
       <Link to={`CarPage/${index}`} key={index}>
-      <Button variant="primary">Повече информация</Button>
+      <Button variant="primary">{t('button')}</Button>
       </Link>
     </Card.Body>
     <Card.Footer className="text-muted">

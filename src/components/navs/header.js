@@ -7,18 +7,18 @@ import { FiFacebook } from "react-icons/fi";
 import { FaInstagram } from "react-icons/fa";
 import { FaViber } from "react-icons/fa";
 import DropdownLg from './Dropdown'
+import { useTranslation } from 'react-i18next';
 
-class Header extends Component {
-  
-  render() {
-    
+
+  const Header =()=>{
+    const { t } = useTranslation();
        return (
 <div class="header" style={{display: 'flex', flexDirection: 'row'}}>
     <div class="section">
-    <div class="right "><AiOutlinePhone class="mr-2"/>Телефон: +(359) 898 989 898</div>
+    <div class="right "><AiOutlinePhone class="mr-2"/>{t('Phone')}: +(359) 898 989 898</div>
     </div>
     <div class="section">
-    <div class="right"><GoLocation class="mr-2"/>гр. София, ул.Академик Стефан Младенов 46</div>
+    <div class="right"><GoLocation class="mr-2"/>{t('Address')}</div>
 </div>
 <div class="section">
 <div class="right"><BsEnvelope class="mr-2"/>Email: sportcarrentbg@gmail.com</div>
@@ -35,7 +35,6 @@ class Header extends Component {
   <DropdownLg/>
   </div>
     );
-  }
 }
  
 export default Header;

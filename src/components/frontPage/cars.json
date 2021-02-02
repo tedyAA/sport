@@ -28,6 +28,15 @@
             "Пълна техническа поддръжка",
             "Заместващ автомобил при авария"   
             ],
+            "specificationsEN":[
+                "24-hour rental" ,
+                "Unlimited mileage",
+                "Basic car insurance",
+                "Full technical support",
+                "24-hour free roadside assistance",
+                "Full technical support",
+                "Replacement car in case of an accident"   
+                ],
         "name":"Peugeot 3008",
         "price":"10.99",
         "gear":"true"
@@ -61,6 +70,15 @@
             "Пълна техническа поддръжка",
             "Заместващ автомобил при авария"   
             ],
+            "specificationsEN":[
+                "24-hour rental" ,
+                "Unlimited mileage",
+                "Basic car insurance",
+                "Full technical support",
+                "24-hour free roadside assistance",
+                "Full technical support",
+                "Replacement car in case of an accident"   
+                ],
         "name":"Peugeot 308 rcz",
         "price":"10.99",
         "gear":"false"
@@ -94,6 +112,15 @@
         "Пълна техническа поддръжка",
         "Заместващ автомобил при авария"   
         ],
+        "specificationsEN":[
+            "24-hour rental" ,
+            "Unlimited mileage",
+            "Basic car insurance",
+            "Full technical support",
+            "24-hour free roadside assistance",
+            "Full technical support",
+            "Replacement car in case of an accident"   
+            ],
         "name":"Peugeot 205",
         "price":"10.99",
         "gear":"true"
@@ -127,6 +154,15 @@
             "Пълна техническа поддръжка",
             "Заместващ автомобил при авария"   
             ],
+            "specificationsEN":[
+                "24-hour rental" ,
+                "Unlimited mileage",
+                "Basic car insurance",
+                "Full technical support",
+                "24-hour free roadside assistance",
+                "Full technical support",
+                "Replacement car in case of an accident"   
+                ],
         "name":"Peugeot 306",
         "price":"10.99"
     },
@@ -159,6 +195,15 @@
             "Пълна техническа поддръжка",
             "Заместващ автомобил при авария"   
             ],
+            "specificationsEN":[
+                "24-hour rental" ,
+                "Unlimited mileage",
+                "Basic car insurance",
+                "Full technical support",
+                "24-hour free roadside assistance",
+                "Full technical support",
+                "Replacement car in case of an accident"   
+                ],
         "name":"Peugeot 208",
         "price":"10.99",
         "gear":"false"
@@ -192,6 +237,15 @@
             "Пълна техническа поддръжка",
             "Заместващ автомобил при авария"   
             ],
+            "specificationsEN":[
+                "24-hour rental" ,
+                "Unlimited mileage",
+                "Basic car insurance",
+                "Full technical support",
+                "24-hour free roadside assistance",
+                "Full technical support",
+                "Replacement car in case of an accident"   
+                ],
         "name":"Peugeot 207",
         "price":"10.99"
     }

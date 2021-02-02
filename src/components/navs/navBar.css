@@ -24,10 +24,13 @@ background-color: rgb(0 0 0 / 68%);
     min-width: 5px;
   
 }
-@media screen and (max-width: 1400px) {
+/* @media screen and (max-width: 1400px) {
     div.try {
       display: none;
     }
+} */
+.navbar-light .navbar-nav .nav-link.active {
+    color: white;
 }
 .header{
     height: 40px;

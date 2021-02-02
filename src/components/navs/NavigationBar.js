@@ -3,9 +3,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav } from 'react-bootstrap';
 import './navBar.css';
 import Header from './header'
+import { useTranslation } from 'react-i18next';
+import { Link, NavLink } from 'react-router-dom'
+
 
 const NavigationBar =()=> {
-  
+  const { t } = useTranslation();
     return(
   <div>
     <div class="try">
@@ -17,10 +20,10 @@ const NavigationBar =()=> {
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
-        <Nav.Link href="/FrontPage">Автомобили</Nav.Link>
-        <Nav.Link href="/RentalConditions">Условия за наем</Nav.Link>
-        <Nav.Link href="/About">За нас</Nav.Link>
-        <Nav.Link href="/Contacts">Контакти</Nav.Link>
+        <Nav.Link as={NavLink} to="/FrontPage">{t('cars')}</Nav.Link>
+        <Nav.Link as={NavLink} to="/RentalConditions">{t('Conditions')}</Nav.Link>
+        <Nav.Link as={NavLink} to="/About">{t('AboutUs')}</Nav.Link>
+        <Nav.Link as={NavLink} to="/Contacts">{t('Contacts')}</Nav.Link>
     </Nav>
   </Navbar.Collapse>
 </Navbar>

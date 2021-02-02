@@ -6,8 +6,23 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
+        //nav
+        "cars":"Cars",
+        "Conditions":"Rental conditions",
+        "AboutUs":"About us",
+        "Contacts": "Contacts",
+        //Header
+        "Phone":"Phone:",
+        "Address":"Sofia, Akademik Stefan Mladenov st.",
         //FrontPage
+        "from":"from",
+        "price":"/ day",
+        "button":"Book now",
         //CarPage
+        "reservation":"Reservation for car rental by phone / Viber / Whatsapp:",
+        "carInfo":"Excellent maneuverability and driving pleasure",
+        "carspecifications":"When looking for practicality, convenience and modern vision in the economy class, the choice is easy.The fourth generation Renault Clio ranks among the bright representatives of the French brand. The model comes with larger sizes, impressive design and interior, which provide very good comfort to all passengers and enough space for their luggage.",
+        "carPageButton":"Book Now",
         // RentalConditions
         "RentalConditionsHeader":"Rental conditions",
         "SmallHeader":"DAILY PRICES INCLUDE:",
@@ -49,12 +64,33 @@ const resources = {
         "info":"Contact us for information about the products we offer, as well as to prepare an offer. You can use the contact details provided or the contact us button below.",
      "address":"Address Sofia, Akademik Stefan Mladenov st. ",
 "contacts":"Contact us:",
+//BookingPage
+"userData":"Enter data",
+"Name":"Name",
+"LastName":"Last name",
+"Email":"Email",
+"Phone":"Phone number",
     }
   },
   bg: {
     translation: {
+        //nav
+        "cars":"Автомобили",
+        "Conditions":"Условия за наем",
+        "AboutUs":"За нас",
+        "Contacts": "Контакти",
+        //Header
+        "Phone":"Телефон: ",
+        "Address":"гр. София, ул.Академик Стефан Младенов 46",
          //FrontPage
+         "from":"от",
+         "price":"/ ден",
+         "button":"Повече информация",
         //CarPage
+        "reservation":"Резервация за кола под наем по телефона/Viber/Whatsapp:",
+        "carInfo":"Отлична маневреност и удоволствие от шофирането",
+        "carspecifications":"Когато търсите практичност, удобство и модерна визия в икономичния клас, изборът е лесен.Четвъртото поколение Renault Clio се нарежда сред ярките представители на френската марка. Моделът идва с по-големи размери, впечатляващ дизайн и интериор, които осигуравят много добър комфорт на всички пасажери и достатъчно място за техния багаж.",
+        "carPageButton":"Резервирай",
         // RentalConditions
         "RentalConditionsHeader":"Условия за наем",
         "SmallHeader":"ДНЕВНИТЕ ЦЕНИ ВКЛЮЧВАТ:",
@@ -95,6 +131,12 @@ const resources = {
         "info":"Свържете се с нас за информация относно предлаганите от нас автомобили, както и за изготвяне на оферта. Можете да използвате посочените координати за връзка или бутона за връзка с нас по-долу.",
      "address":"Адрес: гр. София, ул.Академик Стефан Младенов 46",
 "contacts":"Номер за връзка с нас :",
+//BookingPage
+"userData":"ВАШИТЕ ДАННИ",
+"Name":"Име",
+"LastName":"Фамилия",
+"Email":"Email",
+"Phone":"Телефон",
     }
   }
 };
