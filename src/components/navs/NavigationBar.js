@@ -5,10 +5,15 @@ import './navBar.css';
 import Header from './header'
 import { useTranslation } from 'react-i18next';
 import { Link, NavLink } from 'react-router-dom'
-
+import { NavDropdown} from 'react-bootstrap'
+import Flags from 'country-flag-icons/react/1x1'
 
 const NavigationBar =()=> {
   const { t } = useTranslation();
+  const { i18n } = useTranslation(['translation', 'welcome']);
+  const changeLanguage = code => {
+    i18n.changeLanguage(code);
+  };
     return(
   <div>
     <div class="try">
@@ -24,6 +29,10 @@ const NavigationBar =()=> {
         <Nav.Link as={NavLink} to="/RentalConditions">{t('Conditions')}</Nav.Link>
         <Nav.Link as={NavLink} to="/About">{t('AboutUs')}</Nav.Link>
         <Nav.Link as={NavLink} to="/Contacts">{t('Contacts')}</Nav.Link>
+        <NavDropdown title={<Flags.BG title="Bulgarian" className="flagIcons"/>} id="collasible-nav-dropdown">
+        <NavDropdown.Item  onClick={() => changeLanguage('bg')} as="button">BG</NavDropdown.Item>
+        <NavDropdown.Item  onClick={() => changeLanguage('en')} as="button">EN</NavDropdown.Item>
+      </NavDropdown>
     </Nav>
   </Navbar.Collapse>
 </Navbar>

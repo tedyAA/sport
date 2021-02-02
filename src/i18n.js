@@ -12,7 +12,7 @@ const resources = {
         "AboutUs":"About us",
         "Contacts": "Contacts",
         //Header
-        "Phone":"Phone:",
+        "HeaderPhone":"Phone:",
         "Address":"Sofia, Akademik Stefan Mladenov st.",
         //FrontPage
         "from":"from",
@@ -80,7 +80,7 @@ const resources = {
         "AboutUs":"За нас",
         "Contacts": "Контакти",
         //Header
-        "Phone":"Телефон: ",
+        "HeaderPhone":"Телефон: ",
         "Address":"гр. София, ул.Академик Стефан Младенов 46",
          //FrontPage
          "from":"от",

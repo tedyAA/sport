@@ -2,12 +2,15 @@
     width: 90%;
     height: 400px;
 }
-.contactsContainer{
-    margin-top: 200px;
-}
-.h1{
+.p{
   
     color: #333457;
-    font-weight: 700;
+    font-weight: 500;
     margin-top:20px;
     }
+    .p1{
+        color: #333457;
+        font-weight: 500;
+        margin-top:20px;
+        font-size: 20px;
+        }

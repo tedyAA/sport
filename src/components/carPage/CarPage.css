@@ -50,7 +50,7 @@
     font-size: 80px;
   }
   .col-sm-4 {  
-    background-color: #fbfbfb6b;
+    /* background-color: #fbfbfb6b; */
 }
 .col-sm-8 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
